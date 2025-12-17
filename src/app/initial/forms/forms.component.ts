@@ -70,7 +70,7 @@ salvar(){
     return this.fb.control('', [Validators.required, Validators.maxLength(30)]);
   }
 
-  adicionarTelefone(): void {
+  adicionarEndereco(): void {
     this.enderecos.push(this.criarEnderecoControl());
   }
 
