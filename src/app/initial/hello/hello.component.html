@@ -1,0 +1,35 @@
+
+<p>Inicio Componente Hello</p>
+
+
+
+<!-- <button class="btn btn-primary mb-5" (click)="AddContador()">Add</button> -->
+
+
+<ul>
+    @for (item of pokelist; track $index) {
+        <li>{{item.name}} | {{item.url}}</li>
+    }
+    <!-- <li *ngFor="let item of items">{{item}}</li> -->
+    
+</ul>
+
+<!-- @if(contador() > 10){
+    <p>Contador: {{contador()}}</p>
+    <button class="btn btn-primary" (click)="Acao()">Ação</button>
+} -->
+
+ <div *ngIf="contador() > 10">
+    <p>Contador: {{contador()}}</p>
+    <button class="btn btn-primary" (click)="Acao()">Ação</button>
+ </div>
+
+
+
+ <button class="btn btn-primary" (click)="Confirmar.emit()">Ação</button>
+
+ <p>Renderizando</p>
+ <router-outlet />
+
+
+<p>Fim Componente Hello</p>
