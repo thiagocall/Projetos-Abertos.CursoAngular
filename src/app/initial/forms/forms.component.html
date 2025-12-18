@@ -7,21 +7,54 @@
                 <form [formGroup]="frm">
                     <div>
                         <label for="nome">Nome</label>
-                        <input id="nome" class="form-control" formControlName="nome" type="text" >
+                        <input id="nome" class="form-control" [ngClass]="frm.controls['nome'].errors && frm.controls['nome'].touched ? 'is-invalid' : ''" formControlName="nome" type="text" >
                     </div>
+                    <div formArrayName="enderecos" style="margin-top: 16px;">
+                
+                    <div class="mt-2">
+                        <button class="btn btn-primary" (click)="adicionarEndereco()">Add Endereço</button>
                     <div>
-                        <label for="endereco">Endereço:</label>
-                        <input id="endereco" class="form-control" formControlName="endereco" type="text" >
+
+                    @for (ctrl of enderecos.controls; track $index ) {
+                    <label [for]="ctrl">Endereço:</label>
+                    <div class="input-group">
+                        <input type="text" [id]="ctrl" class="form-control " [ngClass]="ctrl.errors && ctrl.touched ? 'is-invalid' : ''"
+                            [formControlName]="$index" type="text">
+                        <div class="input-group-append" *ngIf="enderecos.length > 1">
+<<<<<<< Updated upstream
+                            <button type="button" class="btn btn-group btn-outline-danger" (click)="removerTelefone($index)">
+                                Remover
+                            </button>
+                        </div>
                     </div>
+                    }
+                    </div>
+                    </div>
+=======
+                            <button type="button" class="btn btn-group btn-outline-danger" (click)="removerEndereco($index)">
+                                Remover
+                            </button>
+                        </div>
+>>>>>>> Stashed changes
+                    </div>
+                    }
+                    </div>
+                    </div>
+                    </div>
+
                     <div>
                         <label for="email">E-mail:</label>
-                        <input id="email" class="form-control" formControlName="email" type="text">
+                        <input id="email" class="form-control" [ngClass]="frm.controls['email'].errors && frm.controls['email'].touched ? 'is-invalid' : ''" formControlName="email" type="text">
+<<<<<<< Updated upstream
+                        <span class="invalid-feedback">error</span>
+=======
+>>>>>>> Stashed changes
                     </div>
                 </form>
             </div>
             <div class="row">
             </div>
-            <button class="btn btn-primary" (click)="salvar()">
+            <button type="button" class="btn btn-primary" (click)="salvar()">
                 Salvar
             </button>
         </div>
