@@ -21,6 +21,7 @@
                         <input type="text" [id]="ctrl" class="form-control " [ngClass]="ctrl.errors && ctrl.touched ? 'is-invalid' : ''"
                             [formControlName]="$index" type="text">
                         <div class="input-group-append" *ngIf="enderecos.length > 1">
+<<<<<<< Updated upstream
                             <button type="button" class="btn btn-group btn-outline-danger" (click)="removerTelefone($index)">
                                 Remover
                             </button>
@@ -29,11 +30,25 @@
                     }
                     </div>
                     </div>
+=======
+                            <button type="button" class="btn btn-group btn-outline-danger" (click)="removerEndereco($index)">
+                                Remover
+                            </button>
+                        </div>
+>>>>>>> Stashed changes
                     </div>
+                    }
+                    </div>
+                    </div>
+                    </div>
+
                     <div>
                         <label for="email">E-mail:</label>
                         <input id="email" class="form-control" [ngClass]="frm.controls['email'].errors && frm.controls['email'].touched ? 'is-invalid' : ''" formControlName="email" type="text">
+<<<<<<< Updated upstream
                         <span class="invalid-feedback">error</span>
+=======
+>>>>>>> Stashed changes
                     </div>
                 </form>
             </div>
