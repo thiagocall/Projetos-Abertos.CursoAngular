@@ -21,21 +21,10 @@
                         <input type="text" [id]="ctrl" class="form-control " [ngClass]="ctrl.errors && ctrl.touched ? 'is-invalid' : ''"
                             [formControlName]="$index" type="text">
                         <div class="input-group-append" *ngIf="enderecos.length > 1">
-<<<<<<< Updated upstream
-                            <button type="button" class="btn btn-group btn-outline-danger" (click)="removerTelefone($index)">
-                                Remover
-                            </button>
-                        </div>
-                    </div>
-                    }
-                    </div>
-                    </div>
-=======
                             <button type="button" class="btn btn-group btn-outline-danger" (click)="removerEndereco($index)">
                                 Remover
                             </button>
                         </div>
->>>>>>> Stashed changes
                     </div>
                     }
                     </div>
